@@ -18,74 +18,58 @@ class MovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: 160,
       margin: EdgeInsets.only(
         left: defaultMargin,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Container(
-          //   width: 300,
-          //   height: 200,
-          //   decoration: BoxDecoration(
-          //     image: DecorationImage(
-          //       fit: BoxFit.cover,
-          //       image: NetworkImage('a'),
-          //     ),
-          //     borderRadius: BorderRadius.circular(21),
-          //   ),
-          // ),
+          Container(
+            width: 160,
+            height: 200,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(imageUrl),
+              ),
+              borderRadius: BorderRadius.circular(21),
+            ),
+          ),
           SizedBox(
             height: 20,
           ),
+          Text(
+            title,
+            style: blackTextStyle.copyWith(
+              fontWeight: bold,
+              fontSize: 16,
+            ),
+          ),
+          SizedBox(
+            height: 4,
+          ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: blackTextStyle.copyWith(
-                      fontSize: 20,
-                      fontWeight: bold,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Text(
-                    genre,
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
-                    ),
-                  ),
-                ],
+              Icon(
+                Icons.star,
+                color: rating >= 1 ? kYellowColor : kGreyColor,
               ),
-              Row(
-                children: [
-                  Icon(
-                    Icons.star,
-                    color: rating >= 1 ? kYellowColor : kGreyColor,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 2 ? kYellowColor : kGreyColor,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 3 ? kYellowColor : kGreyColor,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 4 ? kYellowColor : kGreyColor,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 5 ? kYellowColor : kGreyColor,
-                  ),
-                ],
+              Icon(
+                Icons.star,
+                color: rating >= 2 ? kYellowColor : kGreyColor,
+              ),
+              Icon(
+                Icons.star,
+                color: rating >= 3 ? kYellowColor : kGreyColor,
+              ),
+              Icon(
+                Icons.star,
+                color: rating >= 4 ? kYellowColor : kGreyColor,
+              ),
+              Icon(
+                Icons.star,
+                color: rating >= 5 ? kYellowColor : kGreyColor,
               ),
             ],
           ),

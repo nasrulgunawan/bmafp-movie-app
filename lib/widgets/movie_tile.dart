@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/theme.dart';
+import 'package:movie_app/widgets/rating.dart';
 
 class MovieTile extends StatelessWidget {
   final String title;
@@ -20,68 +21,52 @@ class MovieTile extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(bottom: 30),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Container(
-          //   width: 157,
-          //   height: 231,
-          //   margin: EdgeInsets.only(right: 20),
-          //   decoration: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(21),
-          //     image: DecorationImage(
-          //       fit: BoxFit.cover,
-          //       image: AssetImage(
-          //         imageUrl,
-          //       ),
-          //     ),
-          //   ),
-          // ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: blackTextStyle.copyWith(
-                  fontSize: 20,
-                  fontWeight: bold,
+          Container(
+            width: 100,
+            height: 160,
+            margin: EdgeInsets.only(right: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(21),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                  imageUrl,
                 ),
               ),
-              SizedBox(
-                height: 4,
-              ),
-              Text(
-                genre,
-                style: greyTextStyle.copyWith(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
+            ),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(top: 24, right: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Icon(
-                    Icons.star,
-                    color: rating >= 1 ? kYellowColor : kGreyColor,
+                  Text(
+                    title,
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: bold,
+                    ),
+                    maxLines: 3,
                   ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 2 ? kYellowColor : kGreyColor,
+                  SizedBox(
+                    height: 10,
                   ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 3 ? kYellowColor : kGreyColor,
+                  Rating(rating: rating),
+                  SizedBox(
+                    height: 8,
                   ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 4 ? kYellowColor : kGreyColor,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: rating >= 5 ? kYellowColor : kGreyColor,
+                  Text(
+                    genre,
+                    style: greyTextStyle.copyWith(
+                      fontSize: 12,
+                    ),
                   ),
                 ],
               ),
-            ],
+            ),
           ),
         ],
       ),
