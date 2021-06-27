@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:movie_app/screens/home_screen.dart';
+import 'package:movie_app/screens/main_screen.dart';
 import 'package:movie_app/screens/splash_screen.dart';
 import 'package:movie_app/utils/routes.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => SplashScreen(),
-        Routes.home: (context) => HomeScreen(),
+        Routes.main: (context) => MainScreen(),
       },
     );
   }

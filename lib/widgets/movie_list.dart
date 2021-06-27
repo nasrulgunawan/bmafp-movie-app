@@ -30,7 +30,7 @@ class MovieList extends StatelessWidget {
             List<Movie> movies = snapshot.data ?? [];
             return Container(
               margin: EdgeInsets.only(
-                top: 30,
+                top: 10,
                 left: defaultMargin,
               ),
               child: Column(
@@ -52,7 +52,7 @@ class MovieList extends StatelessWidget {
                             genre: 'Action',
                             imageUrl:
                                 '${dotenv.env['BASE_IMAGE_URL']}${movie.posterPath}',
-                            rating: 5,
+                            rating: movie.voteRate,
                           )),
                     )
                     .toList(),

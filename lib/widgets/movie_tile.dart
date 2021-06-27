@@ -6,7 +6,7 @@ class MovieTile extends StatelessWidget {
   final String title;
   final String genre;
   final String imageUrl;
-  final int rating;
+  final double rating;
 
   const MovieTile({
     Key? key,
@@ -54,7 +54,10 @@ class MovieTile extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Rating(rating: rating),
+                  Rating(
+                    rating: rating,
+                    alignment: MainAxisAlignment.start,
+                  ),
                   SizedBox(
                     height: 8,
                   ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/theme.dart';
+import 'package:movie_app/widgets/rating.dart';
 
 class MovieCard extends StatelessWidget {
   final String title;
   final String genre;
   final String imageUrl;
-  final int rating;
+  final double rating;
 
   const MovieCard({
     Key? key,
@@ -49,30 +50,7 @@ class MovieCard extends StatelessWidget {
           SizedBox(
             height: 4,
           ),
-          Row(
-            children: [
-              Icon(
-                Icons.star,
-                color: rating >= 1 ? kYellowColor : kGreyColor,
-              ),
-              Icon(
-                Icons.star,
-                color: rating >= 2 ? kYellowColor : kGreyColor,
-              ),
-              Icon(
-                Icons.star,
-                color: rating >= 3 ? kYellowColor : kGreyColor,
-              ),
-              Icon(
-                Icons.star,
-                color: rating >= 4 ? kYellowColor : kGreyColor,
-              ),
-              Icon(
-                Icons.star,
-                color: rating >= 5 ? kYellowColor : kGreyColor,
-              ),
-            ],
-          ),
+          Rating(rating: rating, alignment: MainAxisAlignment.start)
         ],
       ),
     );

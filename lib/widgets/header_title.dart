@@ -14,9 +14,16 @@ class HeaderTitle extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Hello $name,",
-              style: TextStyle(fontSize: 24, fontWeight: semiBold)),
-          Text(subtitle),
+          Text(
+            "Hello $name,",
+            style: blackTextStyle.copyWith(fontSize: 24, fontWeight: semiBold),
+          ),
+          Text(
+            subtitle,
+            style: TextStyle(
+              color: kBlackColor.withAlpha(160),
+            ),
+          ),
         ],
       ),
     );

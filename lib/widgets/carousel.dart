@@ -49,7 +49,7 @@ class Carousel extends StatelessWidget {
                               genre: 'Action',
                               imageUrl:
                                   '${dotenv.env['BASE_IMAGE_URL']}${movie.posterPath}',
-                              rating: 5,
+                              rating: movie.voteRate,
                             )),
                       )
                       .toList(),
