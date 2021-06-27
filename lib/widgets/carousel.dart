@@ -34,7 +34,7 @@ class Carousel extends StatelessWidget {
                 child: Row(
                   children: movies
                       .map(
-                        (movie) => GestureDetector(
+                        (movie) => InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,

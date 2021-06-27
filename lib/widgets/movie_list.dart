@@ -37,7 +37,7 @@ class MovieList extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: movies
                     .map(
-                      (movie) => GestureDetector(
+                      (movie) => InkWell(
                           onTap: () {
                             Navigator.push(
                               context,
