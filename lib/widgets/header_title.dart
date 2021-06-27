@@ -20,9 +20,7 @@ class HeaderTitle extends StatelessWidget {
           ),
           Text(
             subtitle,
-            style: TextStyle(
-              color: kBlackColor.withAlpha(160),
-            ),
+            style: greyTextStyle,
           ),
         ],
       ),

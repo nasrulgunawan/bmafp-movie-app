@@ -39,7 +39,7 @@ class MovieTile extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(top: 24, right: 24),
+              padding: EdgeInsets.only(top: defaultMargin, right: defaultMargin),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

@@ -13,7 +13,7 @@ Future<String> _loadMovieAsset() async {
 }
 
 Future<List<Movie>> getMovies() async {
-  // await wait(3);
+  
   String jsonString = await _loadMovieAsset();
   List jsonResponse = json.decode(jsonString);
   return jsonResponse.map((m) => Movie.fromJson(m)).toList();

@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
       ),
       backgroundColor: kBackgroundColor,
       body: Container(
-        padding: EdgeInsets.all(24),
+        padding: EdgeInsets.all(defaultMargin),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -8,7 +8,7 @@ class CustomTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24),
+      padding: EdgeInsets.symmetric(horizontal: defaultMargin),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -20,12 +20,12 @@ class CustomTitle extends StatelessWidget {
             ),
           ),
           TextButton(
-              onPressed: () {},
-              child: Text(
-                'See all',
-                style:
-                    blackTextStyle.copyWith(color: kBlackColor.withAlpha(140)),
-              ))
+            onPressed: () {},
+            child: Text(
+              'See all',
+              style: greyTextStyle,
+            ),
+          )
         ],
       ),
     );
