@@ -44,7 +44,7 @@ class MovieCard extends StatelessWidget {
             title,
             style: blackTextStyle.copyWith(
               fontWeight: bold,
-              fontSize: 16,
+              fontSize: 18,
             ),
           ),
           SizedBox(

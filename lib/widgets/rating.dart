@@ -16,22 +16,27 @@ class Rating extends StatelessWidget {
         Icon(
           Icons.star,
           color: _rating >= 1 ? kYellowColor : kGreyColor,
+          size: 16,
         ),
         Icon(
           Icons.star,
           color: _rating >= 2 ? kYellowColor : kGreyColor,
+          size: 16,
         ),
         Icon(
           Icons.star,
           color: _rating >= 3 ? kYellowColor : kGreyColor,
+          size: 16,
         ),
         Icon(
           Icons.star,
           color: _rating >= 4 ? kYellowColor : kGreyColor,
+          size: 16,
         ),
         Icon(
           Icons.star,
           color: _rating >= 5 ? kYellowColor : kGreyColor,
+          size: 16,
         ),
       ],
     );

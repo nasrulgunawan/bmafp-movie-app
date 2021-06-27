@@ -19,13 +19,13 @@ class DetailScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(movie.title, style: TextStyle(color: kBlackColor)),
-        backgroundColor: Colors.white,
+        backgroundColor: kBackgroundColor,
         elevation: 0,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.white,
+          color: kBackgroundColor,
           padding: EdgeInsets.all(defaultMargin),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,

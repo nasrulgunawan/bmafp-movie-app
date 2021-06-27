@@ -18,34 +18,89 @@ class ProfileScreen extends StatelessWidget {
       ),
       backgroundColor: kBackgroundColor,
       body: Container(
-        padding: EdgeInsets.all(defaultMargin),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              width: 160,
-              height: 260,
-              margin: EdgeInsets.only(right: 20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(21),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/profile.jpg'),
-                ),
-              ),
-            ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+          padding: EdgeInsets.all(defaultMargin),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Nasrul Gunawan'),
+                  Container(
+                    margin: EdgeInsets.only(right: 24),
+                    child: CircleAvatar(
+                      backgroundColor: kBlackColor,
+                      child: Text('NG'),
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Nasrul Gunawan',
+                          style: TextStyle(
+                              color: kBlackColor,
+                              fontSize: 18,
+                              fontWeight: semiBold),
+                        ),
+                        SizedBox(
+                          height: 2,
+                        ),
+                        Text(
+                          'Dicoding User',
+                          style: TextStyle(color: kBlackColor),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-            )
-          ],
-        ),
-      ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                'Submission',
+                style: blackTextStyle.copyWith(
+                  fontSize: 18,
+                  fontWeight: bold,
+                ),
+              ),
+              SizedBox(
+                height: 4,
+              ),
+              Text(
+                "Kelas Belajar Membuat Aplikasi Flutter untuk Pemula",
+                style: TextStyle(color: kBlackColor),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                'UI Inspiration',
+                style: blackTextStyle.copyWith(
+                  fontSize: 18,
+                  fontWeight: bold,
+                ),
+              ),
+              SizedBox(
+                height: 4,
+              ),
+              Text(
+                "https://dribbble.com/shots/14881170-Cinema-Ticket-App",
+                style: TextStyle(color: kBlackColor),
+              ),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.only(top: 90),
+                  child: Text(
+                    'Movee v1.0.0',
+                    style: blackTextStyle,
+                  ),
+                ),
+              )
+            ],
+          )),
     );
   }
 }

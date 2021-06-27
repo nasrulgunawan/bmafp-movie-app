@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:movie_app/theme.dart';
 import 'package:movie_app/utils/routes.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -35,6 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               "Movee",
               textScaleFactor: 1.3,
+              style: blackTextStyle,
             )
           ],
         ),

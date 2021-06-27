@@ -15,7 +15,7 @@ class Header extends StatelessWidget {
           Icon(EvaIcons.menu2Outline),
           CircleAvatar(
             backgroundColor: kBlackColor,
-            child: const Text('NG'),
+            child: Text('NG'),
           )
         ],
       ),

@@ -39,14 +39,15 @@ class MovieTile extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(top: defaultMargin, right: defaultMargin),
+              padding:
+                  EdgeInsets.only(top: defaultMargin, right: defaultMargin),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
                     style: blackTextStyle.copyWith(
-                      fontSize: 16,
+                      fontSize: 18,
                       fontWeight: bold,
                     ),
                     maxLines: 3,
